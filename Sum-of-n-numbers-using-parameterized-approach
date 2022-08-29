@@ -1,1 +1,23 @@
-2
+///Sum of first n number by parameterized way
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        int n, sum=0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter any number:");
+        n = s.nextInt();
+        Main obj = new Main();
+        obj.natural(n, sum);
+	}
+	
+static void  natural(int i, int sum)
+    {
+        if(i<1){
+            System.out.println("The sum of given number is"+ sum);
+            return;
+        }
+        natural(i-1, sum+i);
+    }
+}
