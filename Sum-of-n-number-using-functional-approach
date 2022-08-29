@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+      int n;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter any number:");
+        n = s.nextInt();
+        Main obj = new Main();
+        System.out.println(obj.natural(n));
+        
+	}
+	
+static int  natural(int n)
+    {
+        if(n==0){
+            return 0;
+        }
+        return(n+natural(n-1));
+         
+    }
+}
