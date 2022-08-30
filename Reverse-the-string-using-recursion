@@ -19,3 +19,5 @@ public class Main
 	}
 
 }
+//Time Complexity is o(n)
+//Space Complexity is o(n) stack space
