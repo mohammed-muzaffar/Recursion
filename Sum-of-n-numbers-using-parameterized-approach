@@ -21,3 +21,5 @@ static void  natural(int i, int sum)
         natural(i-1, sum+i);
     }
 }
+//Time Complexity is o(n).
+//Space Complexity is o(n) stack space.
