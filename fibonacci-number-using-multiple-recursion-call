@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = s.nextInt();
+		System.out.println(fibonacci(n));
+	}
+	
+	public static int fibonacci(int i){
+	    if(i==1 || i==0){
+	        return i;
+	    }
+	   int prev = fibonacci(i-1);
+	   int secondPrev = fibonacci(i-2);
+	   return prev + secondPrev;
+	}
+}
+
+
+//Time Complexity is o(2^n) because it calling two recursion call at one time ex n = 4; 2^4=16 but we are getting the 2^4=9 so we are considering the wrost case 2^n is the complexity.
+//Space complexity is o(2^n) stack space.
