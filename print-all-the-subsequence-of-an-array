@@ -1,0 +1,47 @@
+Pseudocode for printing all the subsequence of an array
+
+subsequence(arr, index, result)
+   { 
+     if(index >= n)
+       print(result);
+       return;
+     
+     result.add(arr[index]);
+     subsequence(index+1, result);
+     result.remove(arr[index]-1);
+     subsequence(index+1, result);
+   } 
+   
+
+// Solution
+
+import java.util.*;
+public class Main
+{
+	public static void printSubsequences(int[] arr, int index, ArrayList<Integer> path)
+{
+    if (index >= arr.length)
+    {
+      System.out.println(path);
+    }
+      path.add(arr[index]);
+        
+      printSubsequences(arr, index + 1, path);
+    
+      path.remove(path.size() - 1);
+        
+      printSubsequences(arr, index + 1, path);
+}
+	
+	public static void main(String[] args)
+  {
+    int[] arr = { 3, 1, 2 };  
+    ArrayList<Integer> path = new ArrayList<>();
+    printSubsequences(arr, 0, path);
+   }
+	    
+}
+
+
+//Time Complexity o(2^n) 
+//Space Complexity o(n) recursion stack
