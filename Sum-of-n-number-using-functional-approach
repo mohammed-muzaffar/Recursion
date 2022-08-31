@@ -2,7 +2,7 @@ import java.util.*;
 public class Main
 {
 	public static void main(String[] args) {
-      int n;
+        int n;
         Scanner s = new Scanner(System.in);
         System.out.print("Enter any number:");
         n = s.nextInt();
@@ -11,8 +11,8 @@ public class Main
         
 	}
 	
-static int  natural(int n)
-    {
+        static int  natural(int n)
+        {
         if(n==0){
             return 0;
         }
