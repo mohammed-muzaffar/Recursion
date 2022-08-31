@@ -12,14 +12,15 @@ public class Main
         obj.natural(n, sum);
 	}
 	
-static void  natural(int i, int sum)
-    {
+        static void  natural(int i, int sum)
+        {
         if(i<1){
             System.out.println("The sum of given number is"+ sum);
             return;
         }
         natural(i-1, sum+i);
-    }
+        }
 }
+
 //Time Complexity is o(n).
 //Space Complexity is o(n) stack space.
